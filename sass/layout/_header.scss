@@ -62,3 +62,11 @@
     color: var(--accent-color);
   }
 }
+.menu-list__badge {
+  margin-right: 10px;
+  background-position: center;
+  fill: currentColor;
+}
+.menu-list__badge:hover {
+  fill: var (--accent-color);
+}
