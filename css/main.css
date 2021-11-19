@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --header-color: #ffffff;
   --line-header-color: #ececec;
@@ -69,8 +70,8 @@ img {
 
 .body-logo-head {
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
   margin-right: 90px;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -102,16 +103,6 @@ img {
 
 .addres-logo {
   margin-bottom: 20px;
-}
-
-.link-icon {
-  margin-right: 10px;
-  background-position: center;
-  fill: currentColor;
-}
-
-.link-icon:hover {
-  fill: var(--accent-color);
 }
 
 .icon-manu {
@@ -216,24 +207,8 @@ img {
   fill: var(--header-color);
 }
 
-.header-contact {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--second-text-color);
-  display: flex;
-  align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .header-connect {
   margin-left: auto;
-}
-
-.header-contact:hover,
-.header-contact:focus {
-  color: var(--accent-color);
 }
 
 .aside-footer {
@@ -245,9 +220,7 @@ img {
   color: var(--second-logo-color);
 }
 
-.aside-footer:hover,
-.footer-link:hover,
-.footer-link:focus {
+.aside-footer:hover, .aside-footer:hover, .aside-footer:focus {
   color: var(--accent-color);
 }
 
@@ -400,7 +373,7 @@ img {
 
 .form-hero input::placeholder {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
@@ -412,7 +385,7 @@ img {
   border-color: var(--accent-color);
 }
 
-.form-hero:not(:last-child) {
+.form-hero input:focus:not(:last-child) {
   margin-bottom: 10px;
 }
 
@@ -463,7 +436,7 @@ img {
 
 .form-hero-checbox label {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -514,7 +487,7 @@ img {
 
 .label-footer {
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -558,11 +531,11 @@ img {
   display: flex;
 }
 
-.menu-item:not(:last-child) {
+.menu-list__map:not(:last-child) {
   margin-right: 50px;
 }
 
-.menu-link {
+.menu-list__source {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -576,7 +549,11 @@ img {
   position: relative;
 }
 
-.menu-link.current::before {
+.menu-list__source:hover, .menu-list__source:focus {
+  color: var(--accent-color);
+}
+
+.menu-list__source.current::before {
   content: "";
   width: 100%;
   height: 4px;
@@ -587,8 +564,18 @@ img {
   background-color: #2196f3;
 }
 
-.menu-link:hover,
-.menu-link:focus {
+.menu-list__сonnection {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--second-text-color);
+  display: flex;
+  align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-list__сonnection:hover, .menu-list__сonnection:focus {
   color: var(--accent-color);
 }
 
@@ -637,12 +624,12 @@ img {
   display: flex;
 }
 
-.about-pro-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .about-pro-item {
   width: 270px;
+}
+
+.about-pro-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .about-pro-item::before {
@@ -696,10 +683,6 @@ img {
   background-image: url(../img/page-3/icon/astronaut.svg);
 }
 
-.item-can:not(:last-child) {
-  margin-right: 30px;
-}
-
 .item-us {
   display: flex;
   text-align: center;
@@ -707,6 +690,10 @@ img {
 
 .item-can {
   width: 370px;
+}
+
+.item-can:not(:last-child) {
+  margin-right: 30px;
 }
 
 .features-icon {
@@ -749,6 +736,10 @@ img {
   color: var(--primary-text-color);
 }
 
+.item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .item-substrate {
   background-color: var(--header-color);
   border-radius: 3px;
@@ -771,10 +762,6 @@ img {
   margin-bottom: 10px;
 }
 
-.item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .content-team {
   font-weight: 400;
   font-size: 16px;
@@ -793,8 +780,7 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-info:hover,
-.link-info:focus {
+.link-info:hover, .link-info:focus {
   background-color: var(--accent-color);
 }
 
@@ -803,8 +789,7 @@ img {
   fill: var(--icon-color);
 }
 
-.icon-info:hover,
-.icon-info:focus {
+.icon-info:hover, .icon-info:focus {
   fill: var(--icon-color);
 }
 
@@ -829,6 +814,10 @@ img {
   height: 92px;
 }
 
+.frame:not(:last-child) {
+  margin-right: 30px;
+}
+
 .frame-clients {
   display: flex;
   width: 100%;
@@ -841,8 +830,7 @@ img {
   border-radius: 4px;
 }
 
-.frame-clients:hover,
-.frame-clients:focus {
+.frame-clients:hover, .frame-clients:focus {
   border: 1px solid var(--accent-color);
 }
 
@@ -852,10 +840,6 @@ img {
 
 .frame-clients:focus .icon-frame {
   fill: var(--accent-color);
-}
-
-.frame:not(:last-child) {
-  margin-right: 30px;
 }
 
 .icon-frame {
@@ -904,8 +888,7 @@ img {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.aside-box:hover,
-.aside-box:focus {
+.aside-box:hover, .aside-box:focus {
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }

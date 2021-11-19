@@ -1,3 +1,9 @@
+@mixin font($fw, $fs, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+
 .modal-form {
   width: 528px;
   margin-left: auto;
@@ -7,9 +13,7 @@
 .form-hero {
   display: flex;
   flex-direction: column;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
+  @include font(400, 12px, 1.17);
   text-align: left;
   letter-spacing: 0.01em;
   color: #757575;
@@ -33,25 +37,21 @@
 
 .form-hero input::placeholder {
   font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font(400, 14px, 1.14);
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 .form-hero input:focus {
   outline: none;
   border-color: var(--accent-color);
-}
 
-.form-hero:not(:last-child) {
-  margin-bottom: 10px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .form-text-hero {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(700, 20px, 1.15);
   margin-bottom: 12px;
   text-align: center;
   letter-spacing: 0.03em;
@@ -90,9 +90,7 @@
 }
 .form-hero-checbox label {
   font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.17;
+  @include font(400, 14px, 1.17);
   letter-spacing: 0.03em;
   color: var(--second-text-color);
 }
@@ -136,9 +134,7 @@
 }
 .label-footer {
   margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font(700, 14px, 1.14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
